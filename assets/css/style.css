@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    padding-bottom: 30px;
+}
+
+.navbar-brand {
+    letter-spacing: 0.5px;
+}
+
+.card {
+    border-radius: 14px;
+}
+
+/* ==================== KOTAK IKON KATEGORI (SEPERTI GAMBAR REFERENSI) ==================== */
+.cat-icon-box {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    border-radius: 10px;
+    background-color: #eaf2ff;
+    color: #0d6efd;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+}
+
+/* Kapsul Input Batas Maksimal di dalam Tabel */
+.limit-pill-group {
+    background-color: #f4f7fb;
+    border: 1px solid #dbe3ef;
+    border-radius: 20px;
+    padding: 3px 10px;
+    display: inline-flex;
+    align-items: center;
+    width: 130px;
+    transition: all 0.2s ease;
+}
+
+.limit-pill-group:focus-within {
+    background-color: #ffffff;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.2);
+}
+
+.limit-pill-prefix {
+    font-size: 0.8rem;
+    color: #6c757d;
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.limit-pill-input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0d6efd;
+    outline: none;
+}
+
+/* Mini Progress Bar di bawah Angka Pengeluaran */
+.mini-progress {
+    height: 4px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 5px;
+    min-width: 90px;
+}
+
+/* Mencegah teks tabel turun baris berantakan */
+#tabel-rekap th,
+#tabel-rekap td,
+.table-modern td,
+.table-modern th {
+    white-space: nowrap;
+}
+
+.table-modern td {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+/* Status Sisa Limit */
+.limit-aman {
+    color: #198754;
+    font-weight: 700;
+}
+
+.limit-minus {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+/* ==================== BOTTOM NAVIGATION BAR KHUSUS HP ==================== */
+.mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.btn-bottom-nav {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #495057;
+    border-radius: 14px;
+    padding: 8px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    transition: all 0.2s ease;
+}
+
+.btn-bottom-nav i {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.btn-bottom-nav span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+/* Tombol Aktif Biru Solid Memanjang Seperti Gambar Referensi */
+.btn-bottom-nav.active {
+    background-color: #0066cc;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3);
+}
+
+/* Beri jarak bawah ekstra pada layar HP agar konten tidak tertutup Bottom Bar */
+@media (max-width: 767.98px) {
+    body {
+        padding-bottom: 90px;
+    }
+
+    .fs-6 {
+        font-size: 0.92rem !important;
+    }
+}
