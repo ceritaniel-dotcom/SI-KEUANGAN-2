@@ -290,12 +290,23 @@ function clearPendingSync() {
     localStorage.removeItem(STORAGE_KEYS.PENDING_SYNC);
 }
 
+
 function createSnapshot(data) {
+    const transactions = (data.transactions || []).map(t => ({
+        ...t,
+        id: String(t.id),
+        nominalPemasukan: Number(t.nominalPemasukan || 0),
+        langsungBayar: Number(t.langsungBayar || 0),
+        hutangDulu: Number(t.hutangDulu || 0),
+        tanggal: String(t.tanggal || '')
+    }));
+
     return JSON.stringify({
-        transactions: data.transactions,
-        limits: data.limits
+        transactions,
+        limits: data.limits || {}
     });
 }
+
 
 function getLocalSnapshot() {
     return createSnapshot({
